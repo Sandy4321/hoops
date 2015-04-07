@@ -6,4 +6,5 @@ The idea is to eventually turn this into a graphical NBA Manager simulation game
 given the large amount of player data that NBA has on games in the more recent seasons.
 
 v1 - first release, used current roster PIE data per player, fuzzylogic
+
 v2 relies on NBA PIE ratio for each team instead of per player, added offline caching of json files, MUCH faster execution
