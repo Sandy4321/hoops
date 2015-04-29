@@ -5,42 +5,36 @@ from prettytable import PrettyTable
 
 def teamstats(team, query):
 
-    opts = ['pids', 'names', 'points', 'assists', 'rebounds', 'pies' ]
+    #['pids', 'names', 'points', 'assists', 'rebounds', 'pies' ]
+        
+    if query == 'pids':    
+ 
+        #returns a list of PLAYER IDs for all contributing players
+        return [team.players[x][0] for x in range(len(team.players))]
     
-    if query in opts:
+    if query == 'names':
         
-        if query == 'pids':    
-     
-            #returns a list of PLAYER IDs for all contributing players
-            return [k for k,v in team.masterdata.items() if team.masterdata[k][4] > 0]
-        
-        if query == 'names':
-            
-            #returns a list of PLAYER NAMES for all contributing players
-            return [team.masterdata[k][0] for k,v in team.masterdata.items() if team.masterdata[k][4] > 0]
-        
-        elif query == 'points':
-        
-            #returns list of POINTS for all contributing players
-            return [team.masterdata[k][1] for k,v in team.masterdata.items() if team.masterdata[k][4] > 0]
-        
-        elif query == 'assists':
-        
-            #returns list of ASSISTS for all contributing players
-            return [team.masterdata[k][2] for k,v in team.masterdata.items() if team.masterdata[k][4] > 0]
-        
-        elif query == 'rebounds':
-        
-            #return list of REBOUNDS for all contributing players
-            return [team.masterdata[k][3] for k,v in team.masterdata.items() if team.masterdata[k][4] > 0]
-        
-        elif query == 'pies':
-        
-            #returns list of PIEs for all contributing players
-            return [team.masterdata[k][4] for k,v in team.masterdata.items() if team.masterdata[k][4] > 0]
-        
-    else:
-        print "Something went wrong in teamstats()"
+        #returns a list of PLAYER NAMES for all contributing players
+        return [team.players[x][1] for x in range(len(team.players))]
+    
+    elif query == 'points':
+    
+        #returns list of POINTS for all contributing players
+        return [team.players[x][2] for x in range(len(team.players))]
+    
+    elif query == 'assists':
+    
+        #returns list of ASSISTS for all contributing players
+        return [team.players[x][3] for x in range(len(team.players))]
+    
+    elif query == 'rebounds':
+    
+        #return list of REBOUNDS for all contributing players
+        return [team.players[x][4] for x in range(len(team.players))]
+    
+    elif query == 'pies':
+    
+        return [team.players[x][5] for x in range(len(team.players))]
     
 
 def excitement(team1, team2):
