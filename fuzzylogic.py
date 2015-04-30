@@ -1,22 +1,14 @@
-#!/usr/bin/env python
-# encoding: utf-8
-
 """
-fuzzylogic v1 - March 2015
+fuzzylogic v2 - May 2015
 Kamil Mansuri
 
-fuzzylogic is a rework of 'fuzzywuzzy' by Adam Cohen
+fuzzylogic v2 is a fork of 'fuzzywuzzy' by Adam Cohen
 The main difference is the forced usage of internal SequenceMatcher, and removal of all python-Levenshtein dependencies
-Rework came about as Levenshtein speed not necessary for tiny queries (datasets should be smaller than 1MB)
+Fork came about as Levenshtein speed not necessary for tiny queries (datasets should be small-ish)
 
 As projects I work on grow more complex, this code will likely become reworked even more from the original code
-I plan on integrating a new SequenceMatcher using SQLAlchemy or more likely 'peewee' to speed things up for larger datasets using an SQL
+I plan on integrating a new SequenceMatcher along with use of SQLAlchemy (or more likely 'peewee') to speed things up for larger datasets using PostreSQL or others
 
-
-
-
-
-'fuzzywuzzy' Copyright (c) 2011 Adam Cohen
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

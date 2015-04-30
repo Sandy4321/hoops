@@ -2,11 +2,8 @@ import random
 from prettytable import PrettyTable
 
 
-
 def teamstats(team, query):
 
-    #['pids', 'names', 'points', 'assists', 'rebounds', 'pies' ]
-        
     if query == 'pids':    
  
         #returns a list of PLAYER IDs for all contributing players
