@@ -1,20 +1,42 @@
 # hoops
-hoops v3 - nba basketball simulation and prediction engine
+#####hoops is a nba basketball game prediction engine written to make it easier to predict the winner
+of an upcoming game based on NBA team and player metrics
+#####This project is written in Python, utilizing the 'requests' library to grab JSON data from the NBA and populate relevant data to a database for rapid querying.
+<br>
+### Version
+v4 - Coming in July 2015, stay tuned!
+v3 - moved over to using SQL instead, significantly faster execution, much lower memory usage, and fewer lines of code!
+v2 relies on NBA PIE ratio for each team instead of per player, added offline caching of json files, MUCH faster execution
+v1 - first release, used current roster PIE data per player
 
-v1 -  Player Data calculated: Total Points Scored, Total Assists, Total Rebounds, and Total PIE (NBA Player Impact Estimate),
-Averages of all of this data as well.
-The simulation doesn't use most of this data at present, I found more stable results from using just the average PIE value,
-but I filter out any team player that has a negative PIE value before calculating this so out of commission players (or very new
-players do not factor in). I also give the 'weaker' team around a 12.5% luck probability.
+###Upcoming features/fixes (v4 early July 2015):
+  - Flask port with web host running over nginx/gunicorn (90% done)
+  - Graphics, assets, making things beautiful  (100% done)
+  - Twitter Bootstrap to keep project mobile-focused (100% done)
+  - RESTful Web API service (70% done)
+  - Speed/caching improvements (90% done)
+  - Cleaning up codebase, reducing dependencies, integrating my 'hotfuzz' module (100% done)
 
-v2 -  Rewrite to use on disk caching for speedup, added in 2-week refresh period
+<br>
+### Future fixes (August 2015)
+  - Publish Unit Tests
+  - Implement some sort of authentication and vertification token
+  - We MUST use starting lineup data, but this appears to only be available if we use web scraping on rotowire (cannot test in off-season as there is no available data to scrape) - possible to get from NBA directly?
+  - Refine prediciton engine, this will be the primary focus after Flask port/API update is complete
 
-v3 - significant update, using SQLite for master cache of all NBA teams along with the essential player data, everything works lightning fast now.  Removed a lot of unnecessary code since we are no longer storing JSON objects doing any File IO. Removed all refreshing for now, but I created separate methods for refreshing team data, player data, and all data.
+###Attribution and Licensing
+#####**MIT License**
+#####**(c)2015 Kamil Mansuri**
+<br>
+#####**hoops is not affiliated with the NBA**
+#####**NBA and its associated trademarks are (C) National Basketball Association**
+#####**[@supermansuri]**
+<br>
 
-future updates:
-
-v4 - focus will be on moving application to web framework, correctly using starting lineup data to "predict" upcoming games. I would rather store all data on server side and we can use cron to refresh data in background. 
-
-v5 - focus will be on using ALL of the appropriate data to better predict outcome and eliminate the need for a 12.5% 'luck' chance
-
-v6 - RESTful API for all stats, and caching even more data -> switching over to using PostreSQL
+[Flask]:http://flask.pocoo.org/
+[gunicorn]:http://gunicorn.org/
+[Twitter Bootstrap]:http://twitter.github.com/bootstrap/
+[jQuery]:http://jquery.com
+[@supermansuri]:http://twitter.com/supermansuri
+[nginx]:http://nginx.org/
+[jenkins]:https://jenkins-ci.org/
