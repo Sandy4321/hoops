@@ -3,10 +3,10 @@
 #####This project is written in Python, utilizing the 'requests' library to grab JSON data from the NBA and populate relevant data to a database for rapid querying.
 
 ### Version
-v4 - Coming in July 2015, stay tuned!
-v3 - moved over to using SQL instead, significantly faster execution, much lower memory usage, and fewer lines of code!
-v2 relies on NBA PIE ratio for each team instead of per player, added offline caching of json files, MUCH faster execution
-v1 - first release, used current roster PIE data per player
+  - v4 Coming in July 2015, stay tuned!
+  - v3 moved over to using SQL instead, significantly faster execution, much lower memory usage, and fewer lines of code!
+  - v2 relies on NBA PIE ratio for each team instead of per player, added offline caching of json files, MUCH faster execution
+  - v1 first release, used current roster PIE data per player
 
 ###Upcoming features/fixes (v4 early July 2015):
   - Flask port with web host running over nginx/gunicorn (90% done)
