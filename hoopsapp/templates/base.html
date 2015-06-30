@@ -14,69 +14,55 @@
      
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 		<link href="{{ static('favicon.ico') }}" rel="shortcut icon">
         <link href="{{ static('styles.css') }}" rel="stylesheet">
 
 		<!-- some jQuery to get elements to fade away -->
+		<!--
 		<script>
-
         window.setTimeout(function() {
   			$("#alert_message").fadeTo(500, 0).slideUp(500, function(){
     			$(this).remove(); 
   				});
 			}, 3000);
-
 		</script>
-
+		-->
 	</head>
 	
 	<body>
 				
-		<div class="container-fluid">
+		<div class="container">
 
-			<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="header clearfix">
+				<nav class="navbar navbar-default navbar-fixed-top" align="center" id="header">
 
-	        	<div id="navbar" class="navbar">
-	          
-		        	<a href="{{ url_for('index') }}" class="navbar-brand">Hoops: NBA Basketball Simulation and Prediction Engine</a>	
+			        <a href="{{ url_for('index') }}">H<span class="fa fa-dribbble"></span><span class="fa fa-dribbble fa-rotate-270"></span>ps</a>
 
-				</div>
+		    	</nav>
+			</div>
 
-	    	</nav>
-		
-		</div>
-		
-		
-		<div class="container-fluid" >
-
+	
 			<!-- content -->
 			
 
             {% block content %}
             {% endblock %}
 			
-			<!-- end of content -->
-
-		</div>
-
 
 		
-		
-		<div class="container-fluid">
+			<div class="header clearfix">
+			<nav class="navbar navbar-default navbar-fixed-bottom" align="center">
 
-			<nav class="navbar navbar-default navbar-fixed-bottom">
-
-				<div class="navbar-brand">
-
-					Hoops is not affiliated or associated with the National Basketball Association
-
+				<div class="navbar" id="footer">
+					All trademarks are copyright their respective owners
 				</div>
 
 		    </nav>
+		    </div>
 
 		</div>
-
 
 		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>

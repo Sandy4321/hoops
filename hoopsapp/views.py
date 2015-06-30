@@ -11,7 +11,7 @@ def index():
 
 
     teams = Teams.query.all()   
-    flash("Select Team 1")
+    flash("Please select Team 1")
     return render_template('index.html', teams=teams)
 
 

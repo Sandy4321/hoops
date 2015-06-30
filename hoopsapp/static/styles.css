@@ -1,153 +1,137 @@
 /* move special fonts to HTML head for better performance */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700');
 
 
-/* custom template */
+
 html, body {
-   height: 100%;
-   font-family:'Open Sans',arial,sans-serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: 'Quattrocento Sans', sans-serif;
 }
-
-
-
 
 a {
   color:#222222;
 }
 
-blockquote footer .user{
-
-  color: #FF0000;
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
-.box {
-  	bottom: 0; /* increase for footer use */
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    background-color: rgba(2,2,2,0.80);
-    background-size: cover;
-    background-attachment: fixed;
+/* Custom page header */
+.header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
 }
 
-.divider {
-	margin-top:32px;
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
 }
 
-
-.form-signin {
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
-}
-.form-signin .form-signin-heading,
-.form-signin .checkbox {
-  margin-bottom: 10px;
-  font-size: 1em;
-}
-.form-signin .checkbox {
-  font-weight: normal;
-}
-.form-signin .form-control {
-  position: relative;
-  height: auto;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 10px;
-  font-size: 1em;
-}
-.form-signin .form-control:focus {
-  z-index: 2;
-}
-.form-signin input#email {
-  margin-bottom: 10px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.form-signin input#password {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+#footer {
+  font-weight: 700;
+  font-size: 1.1em;
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
+#header { 
+  font-size: 5.1em;
+  font-weight: 700;
+  }
 
-
-#main {
-    background-color:#fefefe;
-}
-#main .img-circle {
-  margin-top:18px;
-  height:70px;
-  width:70px;
-} 
-
-
-
-/* bootstrap overrides */
-
-h1,h2,h3 {
-   font-weight:800;
-   font-family:'Open Sans',arial,sans-serif;
+#header span {
+  font-size: 0.62em;
 }
 
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
 .jumbotron {
-  background-color:transparent;
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+ 
 }
-.label-default {
-  background-color:#dddddd;
-}
-.page-header {
-  margin-top: 55px;
-  padding-top: 9px;
-  border-top:1px solid #eeeeee;
-  font-weight:700;
-  text-transform:uppercase;
-  letter-spacing:2px;
+.jumbotron .btn {
+  padding: 14px 24px;
+  font-size: 21px;
 }
 
-.navbar-brand {
-  font-weight: bold;
-  font-size: 1.25em;
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
 }
 
-.well { 
-  font-weight: bold;
-  font-size: 1.25em;
-}
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
 
-.navbar-form {
-  width: 100%;
-}
 
-.input-mini {
-  width: 60px;
-}
 
-.input-small {
-  width: 90px;
-}
 
-.input-medium {
-  width: 150px;
-}
-
-.input-large {
-  width: 210px;
-}
-
-.input-xlarge {
-  width: 270px;
-}
-
-.input-xxlarge {
-  width: 530px;
 }
 
 
-#well2 {
-    height: 85%;
-    margin-bottom: 0;
-    overflow: auto;
+.thumbnail_container {
+     position: relative;
+     width: 100%;
+     padding-bottom: 100%; <!-- matching this to above makes it square -->
+     float:left;
+}
+
+.thumbnail {
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+.thumbnail img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+img{
+    max-height:100%;
+    max-width:100%;
 }
