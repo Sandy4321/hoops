@@ -1,0 +1,38 @@
+{% from "util.html" import render_field %}
+
+{% extends "base.html" %}
+
+{% block content %}
+
+    <br><br><br>
+
+    {% for message in get_flashed_messages() %}
+        <div id="alert_message" class="alert alert-success">{{ message }}</div>
+    {% endfor %}
+
+    <br><br><br>
+
+            <div class="container full-height">
+                <div class="row full-height">
+                    <div class="col-md-3 full-height">  
+                            <div class="well" id="well2">
+                                <div class="list-group"> 
+                                    {% for team in teams %}
+                                    <a href="#" class="list-group-item">
+                                        <img src="{{ url_for('static', filename = 'images/logos/' ~ team.TEAM_ID ~ '.svg') }}" width=150, height=150>
+                                    </a>
+                                    {% endfor %}
+                        
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+    <br><br><br><br>
+
+{% endblock %}

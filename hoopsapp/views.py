@@ -8,7 +8,12 @@ import urlparse
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-  return render_template('index.html')
+
+
+    teams = Teams.query.all()   
+    flash("Select Team 1")
+    return render_template('index.html', teams=teams)
+
 
 
 
