@@ -1,8 +1,7 @@
 # hoops
-#####hoops is a nba basketball game prediction engine written to make it easier to predict the winner
-of an upcoming game based on NBA team and player metrics
+#####hoops is a nba basketball game prediction engine written to make it easier to predict the winner of an upcoming game based on NBA team and player metrics
 #####This project is written in Python, utilizing the 'requests' library to grab JSON data from the NBA and populate relevant data to a database for rapid querying.
-<br>
+
 ### Version
 v4 - Coming in July 2015, stay tuned!
 v3 - moved over to using SQL instead, significantly faster execution, much lower memory usage, and fewer lines of code!
@@ -17,7 +16,6 @@ v1 - first release, used current roster PIE data per player
   - Speed/caching improvements (90% done)
   - Cleaning up codebase, reducing dependencies, integrating my 'hotfuzz' module (100% done)
 
-<br>
 ### Future fixes (August 2015)
   - Publish Unit Tests
   - Implement some sort of authentication and vertification token
@@ -26,8 +24,8 @@ v1 - first release, used current roster PIE data per player
 
 ###Attribution and Licensing
 #####**MIT License**
-#####**(c)2015 Kamil Mansuri**
-<br>
+#####**&copy; 2015 Kamil Mansuri**
+
 #####**hoops is not affiliated with the NBA**
 #####**NBA and its associated trademarks are (C) National Basketball Association**
 #####**[@supermansuri]**
